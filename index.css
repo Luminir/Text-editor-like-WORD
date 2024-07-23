@@ -1,0 +1,98 @@
+/* target all elements */
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    --fontFamily: "Tinos", serif;
+}
+body{
+    background-color: rgb(213, 25, 226);
+}
+.container{
+    background-color: white;
+    width: 90vmin;
+    padding: 50px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgb(9, 43, 8);
+}
+.options{
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:15px;
+}
+button{
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-items: center;
+    border:none;
+    background-color: white;
+    border:none;
+    background-color: white;
+    outline: none;
+}
+button:hover{
+    background-color: rgb(247, 239, 239);
+}
+button:active{
+    background-color: rgb(214, 203, 214);
+}
+select{
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+.options label,
+.options select{
+    font-family: var(--fontFamily);
+}
+.input-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+input[type="color"]{
+    appearance: none;
+    /* Luminir explains: recent property hasnt been standardlize, use -moz/uwebkit- to tell where the NEW property from, webkit by Chrome, moz by Safari 
+    we won't need to add this if appearance became standardlize on every apps*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 40px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+input[type="color"]::color-swatch{
+    border-radius:15px;
+    box-shadow: 0 0 0 2px rgb(254, 254, 254), 0 0 0 3px black;
+}
+input[type="color"]::-webkit-color-swatch{
+    border-radius:15px;
+    box-shadow: 0 0 0 2px rgb(254, 254, 254), 0 0 0 3px black;
+}
+input[type="color"]::-moz-color-swatch{
+    border-radius:15px;
+    box-shadow: 0 0 0 2px rgb(254, 254, 254), 0 0 0 3px black;
+}
+#text-input{
+    margin-top: 14px;
+    border: 1px solid rgb(221, 216, 216);
+    height: 50vh;
+    padding: 20px;
+}
+#text-input:focus{
+   outline: none;
+}
+.active{
+    background-color: rgb(214, 203, 214);
+}
